@@ -1,0 +1,36 @@
+ h1 {
+   font-style: bold;
+   font: 3em arial;
+   color: aliceblue;
+   background-color: blueviolet;
+   text-align: center;
+ }
+ p{
+    color: blueviolet;
+    font-style: italic;
+    border: 1px solid black;
+ }
+ form {
+     font: 1em arial;
+     color: blueviolet;
+     background-color: white;
+     text-align: center;
+     /* Apenas para centralizar o form na página */
+    margin: 0 auto;
+    width: 400px;
+    /* Para ver as bordas do formulário */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+ }
+a{
+    font: 1em arial;
+    color: blueviolet;
+    align-content: center;
+}
+.textos_destaque
+{
+    color: red;
+    font-style: bold;
+    border: 1px solid black;
+}

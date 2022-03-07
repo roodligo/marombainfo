@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastro</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body background="../imagens/fundo2.png">
+    <a href="../index.html">Home</a>
+	<h1>Cadastre-se</h1>
+	
+		<form name="f_cad" method="get" action="../php/formulario.php">
+            <Label>Nome Completo:</Label> <br>
+            <input type="text" name="nome"><br><br>
+            <label>E-Mail:</label>  <br>
+            <input type="text" name="email"><br><br>
+            <label>Nascimento:</label>  <br>
+            <input type="date" name="data_nascimento"><br><br>
+			<label>Sexo:</label>  <br>
+            <input type="radio" name="sexo" value="M"> Masculino<br>
+            <input type="radio" name="sexo" value="F"> Feminino<br><br>
+            <label>Estado:</label> <br>
+            <select name="estado">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select><br><br>
+			<label>Senha:</label> <br>
+			<input type="password" name="senha"><br>
+            <label>Repita a Senha:</label> <br>
+			<input type="password" name="confere_senha"><br><br>
+            <input type="checkbox" name="aceite_news"> Aceito receber novidades por E-mail<br><br>
+            <label>Observações:</label> <br>
+            <textarea name="observacoes"></textarea><br><br>
+			<input type="submit" value="Cadastrar"><br><br>
+            Ou <a href="login.html">Clique aqui</a> para fazer Login
+		</form>
+        
+	
+</body>
+</html>
