@@ -3,7 +3,7 @@
     color: white;
     padding: 15.4px;
     font-size: 16px;
-    width: 900px;
+    width: 1400px;
     text-decoration: none;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
@@ -14,7 +14,8 @@
  p{
     color: #04AA6D;
     font-style: italic;
-    border: 1px solid black;
+    width: 1400px;
+    margin: auto;
  }
  form {
      font: 1em arial;
@@ -23,7 +24,7 @@
      text-align: center;
      /* Apenas para centralizar o form na página */
     margin: 0 auto;
-    width: 900px;
+    width: 1400px;
     /* Para ver as bordas do formulário */
     padding: 1em;
     border: 1px solid #CCC;
@@ -61,14 +62,24 @@ li {
 li a {
     background-color: #04AA6D;
     color: white;
-    padding: 16px;
+    padding: 9px;
     font-size: 16px;
-    margin:auto;
+    margin-top: 5px;
     text-decoration: none;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    border-radius:5px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
     
+}
+.div_margem
+{
+    width: 1400px;
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 li a:hover {
     background: #CCC;
@@ -91,14 +102,13 @@ form div input button {
 .dropbtn {
     background-color: #04AA6D;
     color: white;
-    padding: 16px;
+    padding: 9px;
     font-size: 16px;
-    margin:0;
+    margin-top: 0px;
     text-decoration: none;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    border-radius:5px;
-    margin: auto;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
   }
   
   /* The container <div> - needed to position the dropdown content */

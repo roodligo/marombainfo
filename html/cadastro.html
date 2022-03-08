@@ -7,9 +7,24 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body background="../imagens/fundo2.png">
-   <div>
-    <a href="../index.html">Home</a>
-	<h1>Cadastre-se</h1>
+    <div class="div_margem">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <!-- <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Dropdown2</button>
+                        <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                </div> 
+              </div></li> -->
+        </ul> 
+    </div>
+ 
+    <div>
+    <h1>Cadastre-se</h1>
 </div>
     <div>
 		<form name="f_cad" method="get" action="../php/formulario.php">
@@ -59,7 +74,7 @@
             <input type="checkbox" name="aceite_news" value="1"> Aceito receber novidades por E-mail<br><br>
             <label>Observações:</label> <br>
             <textarea name="observacoes"></textarea><br><br>
-			<input type="submit" value="Cadastrar"><br><br>
+			<input type="submit" value="Cadastrar" class="dropbtn"><br><br>
             Ou <a href="login.html">Clique aqui</a> para fazer Login
 		</form>
     </div>
