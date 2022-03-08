@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body background="../imagens/fundo2.png">
+   <div>
     <a href="../index.html">Home</a>
 	<h1>Cadastre-se</h1>
-	
+</div>
+    <div>
 		<form name="f_cad" method="get" action="../php/formulario.php">
             <Label>Nome Completo:</Label> <br>
             <input type="text" name="nome"><br><br>
@@ -54,13 +56,13 @@
 			<input type="password" name="senha"><br>
             <label>Repita a Senha:</label> <br>
 			<input type="password" name="confere_senha"><br><br>
-            <input type="checkbox" name="aceite_news"> Aceito receber novidades por E-mail<br><br>
+            <input type="checkbox" name="aceite_news" value="1"> Aceito receber novidades por E-mail<br><br>
             <label>Observações:</label> <br>
             <textarea name="observacoes"></textarea><br><br>
 			<input type="submit" value="Cadastrar"><br><br>
             Ou <a href="login.html">Clique aqui</a> para fazer Login
 		</form>
-        
+    </div>
 	
 </body>
 </html>

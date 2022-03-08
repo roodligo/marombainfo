@@ -1,23 +1,29 @@
  h1 {
-   font-style: bold;
-   font: 3em arial;
-   color: aliceblue;
-   background-color: blueviolet;
-   text-align: center;
+    background-color: #04AA6D;
+    color: white;
+    padding: 15.4px;
+    font-size: 16px;
+    width: 900px;
+    text-decoration: none;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    text-align: center;
+    margin: auto;
  }
  p{
-    color: blueviolet;
+    color: #04AA6D;
     font-style: italic;
     border: 1px solid black;
  }
  form {
      font: 1em arial;
-     color: blueviolet;
+     color: #04AA6D;
      background-color: white;
      text-align: center;
      /* Apenas para centralizar o form na página */
     margin: 0 auto;
-    width: 400px;
+    width: 900px;
     /* Para ver as bordas do formulário */
     padding: 1em;
     border: 1px solid #CCC;
@@ -25,7 +31,7 @@
  }
 a{
     font: 1em arial;
-    color: blueviolet;
+    color: #04AA6D;
     align-content: center;
 }
 .textos_destaque
@@ -34,3 +40,96 @@ a{
     font-style: bold;
     border: 1px solid black;
 }
+
+* {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+}
+ 
+ul {
+    margin: 0;
+    padding:0;
+    
+}
+ 
+li {
+    list-style: none; 
+    margin: 10px;
+    display: inline;
+    
+}
+li a {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    margin:auto;
+    text-decoration: none;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    
+}
+li a:hover {
+    background: #CCC;
+    color: #000; 
+    border-color: #000;
+}
+form div input button {
+    
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    margin:0;
+    text-decoration: none;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    margin:0;
+    text-decoration: none;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    margin: auto;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}

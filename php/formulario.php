@@ -6,8 +6,13 @@
     $estado = $_GET["estado"];
     $senha = $_GET["senha"];
     $confere_senha = $_GET["confere_senha"];
-    $aceita_news = $_GET["aceita_news"];
+    $aceita_news = $_GET["aceite_news"];
     $observacoes = $_GET["observacoes"];
-    
-    echo "Nome: ".$nome;
+    echo "Olá ".$nome;
+    if ($senha == $confere_senha){
+        echo " você foi Cadastrado com Sucesso!";
+    }
+    else{
+        echo " a Senha digitada é Invalida";
+    }
 ?>
