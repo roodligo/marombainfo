@@ -21,3 +21,4 @@
             echo "As Senhas Digitadas nao Batem";
         }
         
+?> 
