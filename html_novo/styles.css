@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image:url(../imagens/fundo.jpg);
+  background-image: url(https://i.imgur.com/XbRg9D7.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
@@ -15,28 +15,32 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 10px;
-  }
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+}
 
 .card {
   background-color: #ffffff80;
-  padding: 60px;
+  padding: 30px;
   border-radius: 4%;
-  box-shadow: 9px 9px 5px 0px #00000060;
-  width: auto;
+  box-shadow: 3px 3px 1px 0px #00000060;
+  width: 400px;
 }
 
-
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0d009c
+}
 
 .label-float input{
   width: 100%;
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid ;
+  border-bottom: 2px solid #0d009c;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -58,7 +62,7 @@ body {
 }
 
 .label-float label{
-  
+  color: #0d009c;
   pointer-event: none;
   position: absolute;
   top: 0;
@@ -71,7 +75,7 @@ body {
 .label-float input:valid + label{
   font-size: 13px;
   margin-top: 0;
-  
+  color: #4038a0
 }
 
 button{
@@ -105,9 +109,23 @@ button:hover{
   cursor: pointer;
   color: #0d009c;
 }
-h1{
-    text-align: center;
-    margin-bottom: 20px;
-    color: #0d009c
-  }
+
+#msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+#msgSuccess{
+  text-align: center;
+  color: #00bb00;
+  background-color: #bbffbe;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
 

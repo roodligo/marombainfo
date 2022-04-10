@@ -13,8 +13,7 @@ function limpa_formulário_cep() {
             document.getElementById('bairro').value=(conteudo.bairro);
             document.getElementById('cidade').value=(conteudo.localidade);
             document.getElementById('uf').value=(conteudo.uf);
-           
-        } //end if.
+            } //end if.
         else {
             //CEP não Encontrado.
             limpa_formulário_cep();
