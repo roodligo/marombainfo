@@ -7,7 +7,8 @@
 }
 
 body {
-  background-image:url(../imagens/fundo.jpg);
+ /* background-image:url(https://png.pngtree.com/background/20210711/original/pngtree-colorful-bright-smoke-texture-background-picture-image_1162372.jpg); */
+  background-image: url(https://img.freepik.com/vetores-gratis/fundo-geometrico-plano-colorido_52683-62754.jpg?w=1060&t=st=1649685451~exp=1649686051~hmac=a31c234703382a2a5fd3119f4f77c02a197480515d0d11f34819babdfb5dde53);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
@@ -18,14 +19,14 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
 .card {
   background-color: #ffffff80;
-  padding: 60px;
-  border-radius: 4%;
-  box-shadow: 9px 9px 5px 0px #00000060;
+  padding: 40px;
+  border-radius: 2%;
+  box-shadow: 5px 3px 3px 0px #00000060;
   width: auto;
 }
 
@@ -108,6 +109,6 @@ button:hover{
 h1{
     text-align: center;
     margin-bottom: 20px;
-    color: #0d009c
+    color: #000000
   }
 
