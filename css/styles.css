@@ -9,7 +9,8 @@
 body {
  /* background-image:url(https://png.pngtree.com/background/20210711/original/pngtree-colorful-bright-smoke-texture-background-picture-image_1162372.jpg); */
  /* background-image: url(https://img.freepik.com/vetores-gratis/fundo-geometrico-plano-colorido_52683-62754.jpg?w=1060&t=st=1649685451~exp=1649686051~hmac=a31c234703382a2a5fd3119f4f77c02a197480515d0d11f34819babdfb5dde53); */
-  background-image: url(https://i.imgur.com/XbRg9D7.png);
+ /* background-image: url(https://i.imgur.com/XbRg9D7.png); */
+  background-color: #b2e2f1;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
