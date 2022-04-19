@@ -7,22 +7,21 @@
 }
 
 body {
- /* background-image:url(https://png.pngtree.com/background/20210711/original/pngtree-colorful-bright-smoke-texture-background-picture-image_1162372.jpg); */
- /* background-image: url(https://img.freepik.com/vetores-gratis/fundo-geometrico-plano-colorido_52683-62754.jpg?w=1060&t=st=1649685451~exp=1649686051~hmac=a31c234703382a2a5fd3119f4f77c02a197480515d0d11f34819babdfb5dde53); */
- /* background-image: url(https://i.imgur.com/XbRg9D7.png); */
-  background-color: #d9e1e3;
+  /* background-image:url(https://png.pngtree.com/background/20210711/original/pngtree-colorful-bright-smoke-texture-background-picture-image_1162372.jpg); */
+  /* background-image: url(https://img.freepik.com/vetores-gratis/fundo-geometrico-plano-colorido_52683-62754.jpg?w=1060&t=st=1649685451~exp=1649686051~hmac=a31c234703382a2a5fd3119f4f77c02a197480515d0d11f34819babdfb5dde53); */
+  /* background-image: url(https://i.imgur.com/XbRg9D7.png); */
+  background-color: #eaedee;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
-  
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: auto;
-  }
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
 
 .card {
   background-color: #ffffff80;
@@ -34,34 +33,34 @@ body {
 
 
 
-.label-float input{
+.label-float input {
   width: 100%;
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid ;
+  border-bottom: 2px solid;
   background-color: transparent;
   outline: none;
   min-width: 180px;
   font-size: 16px;
   transition: all .3s ease-out;
   border-radius: 0;
-  
+
 }
 
-.label-float{
+.label-float {
   position: relative;
   padding-top: 13px;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-.label-float input:focus{
+.label-float input:focus {
   border-bottom: 2px solid #4038a0;
 }
 
-.label-float label{
-  
+.label-float label {
+
   pointer-event: none;
   position: absolute;
   top: 0;
@@ -70,68 +69,70 @@ body {
   transition: all .3s ease-out;
 }
 
-.label-float input:focus + label,
-.label-float input:valid + label{
+.label-float input:focus+label,
+.label-float input:valid+label {
   font-size: 13px;
   margin-top: 0;
-  
+
 }
 
-.justify-center{
+.justify-center {
   display: flex;
   justify-content: center;
 }
 
-.fa-eye{
+.fa-eye {
   position: absolute;
   top: 15px;
   right: 10px;
   cursor: pointer;
   color: #0d009c;
 }
-h1{
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000000
-  }
 
-  a {
-    position: relative;
-    color: #fff;
-    text-decoration: none;  
-  }
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000
+}
 
-  a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(201, 13, 13);
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-  }
+a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
 
-  a:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-  }
-  .text-reset:before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(46, 43, 43);
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.1s ease-in-out 0s;
-    transition: all 0.1s ease-in-out 0s;
-  }
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(201, 13, 13);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.text-reset:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(46, 43, 43);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+}
