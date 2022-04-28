@@ -61,7 +61,7 @@ body {
 
 .label-float label {
 
-  pointer-event: none;
+  /* pointer-event: none; */
   position: absolute;
   top: 0;
   left: 0;
