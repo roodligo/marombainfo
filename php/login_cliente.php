@@ -1,7 +1,6 @@
 <?php
 include_once "conexao.php";
 
-
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 $sql = "SELECT * FROM cad_cliente WHERE email = '$email'";

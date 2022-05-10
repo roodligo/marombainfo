@@ -2,7 +2,7 @@
 include_once "conexao.php";
 
 //consultar no banco de dados
-$captura_produtos = "SELECT * FROM cad_produto ORDER BY codigo ASC";
+$captura_produtos = "SELECT codigo, nome, observacao, FORMAT(preco, 2) as preco FROM cad_produto ORDER BY codigo ASC";
 $resultado_produtos = mysqli_query($conn, $captura_produtos);
 
 
