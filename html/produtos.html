@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="shortcut icon" type="imagex/png" href="../imagens/favicon.ico">
 </head>
+
 <body>
   <!--Barra de Navegação-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,7 +38,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/html/quem-somos.html">Quem Somos</a>
-          </li> 
+          </li>
         </ul>
       </div>
       <nav class="navbar navbar-light bg-light">
@@ -68,14 +69,14 @@
   <!--Listar Produtos-->
   <div class="container">
     <h2>Produtos</h2>
-  <br>
+    <br>
   </div>
   <div class="container-lg">
-  <span id="conteudo"></span>
+    <span id="conteudo"></span>
   </div>
   <script>
     $(document).ready(function () {
-      $.post('../php/listar_produtos.php', function(retorna){
+      $.post('../php/listar_produtos.php', function (retorna) {
         $("#conteudo").html(retorna);
       });
     });
@@ -194,4 +195,5 @@
   <!-- Copyright -->
 </footer>
 <!-- Rodapé -->
+
 </html>

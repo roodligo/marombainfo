@@ -20,8 +20,8 @@
 </head>
 
 <body>
-   <!--Barra de Navegação-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!--Barra de Navegação-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="#"></a>
       <img src="/imagens/logo.png" alt="" width="132 height=" 100">
@@ -42,7 +42,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/html/produtos.html">Quem Somos</a>
-          </li> 
+          </li>
         </ul>
       </div>
       <nav class="navbar navbar-light bg-light">
@@ -74,103 +74,103 @@
 
   <!--Formulário Cadastro-->
   <form name="f_cad" method="post" action="../php/cadastra_cliente.php">
-  <div class="container">
-    <div class="card">
-      <h1>Cadastre-se</h1><br>
-      <!--DADOS PESSOAIS-->
+    <div class="container">
+      <div class="card">
+        <h1>Cadastre-se</h1><br>
+        <!--DADOS PESSOAIS-->
 
 
-      <div class="form">
-        <div class="row">
-          <div class="col">
-            <h5>Dados Pessoais</h5>
-            <div class="label-float">
-              <input name="nome" type="text" id="nome" size="60" required>
-              <label id="labelNome" for="nome">Nome Completo:</label>
-            </div>
-            <div class="label-float">
-              <input name="email" type="email" id="email" size="60" required>
-              <label id="labelEmail" for="email">E-mail</label>
-            </div>
+        <div class="form">
+          <div class="row">
+            <div class="col">
+              <h5>Dados Pessoais</h5>
+              <div class="label-float">
+                <input name="nome" type="text" id="nome" size="60" required>
+                <label id="labelNome" for="nome">Nome Completo:</label>
+              </div>
+              <div class="label-float">
+                <input name="email" type="email" id="email" size="60" required>
+                <label id="labelEmail" for="email">E-mail</label>
+              </div>
 
-            <div class="label-float">
-              <div class="row">
-                <div class="col">
-                  <input type="password" id="senha" name="senha" size="20" required placeholder="Senha">
-                  <label id="labelSenha" for="senha"></label>
-                </div>
+              <div class="label-float">
+                <div class="row">
+                  <div class="col">
+                    <input type="password" id="senha" name="senha" size="20" required placeholder="Senha">
+                    <label id="labelSenha" for="senha"></label>
+                  </div>
 
-                <div class="col">
-                  <input type="password" id="repete-senha" name="repete-senha" size="20" required
-                    placeholder="Repita a Senha">
-                  <label id="labelRepitaSenha" for="repete-senha"></label>
+                  <div class="col">
+                    <input type="password" id="repetesenha" name="repetesenha" size="20" required
+                      placeholder="Repita a Senha">
+                    <label id="labelRepitaSenha" for="repete-senha"></label>
+                  </div>
                 </div>
               </div>
+              <legend class="col-form-label col-sm-2 pt-0">Sexo:</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sexo" id="sexo" value="M" checked>
+                <label class="form-check-label" for="sexo">
+                  Masculino
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sexo" id="sexo" value="F">
+                <label class="form-check-label" for="sexo">
+                  Feminino
+                </label>
+              </div><br>
             </div>
-            <legend class="col-form-label col-sm-2 pt-0">Sexo:</legend>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="M" checked>
-              <label class="form-check-label" for="sexo">
-                Masculino
-              </label>
+          </div>
+
+          <!--DADOS DE ENDEREÇO-->
+          <div class="col">
+            <h5>Endereço</h5>
+
+
+            <div class="label-float">
+              <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);"
+                required>
+              <label id="labelCep" for="cep">CEP:</label>
             </div>
+            <div class="label-float">
+              <input name="rua" type="text" id="rua" size="54" required>
+              <label id="labelRua" for="rua">Rua:</label>
+            </div>
+            <div class="label-float">
+              <input name="numero_casa" type="text" id="numero_casa" size="6" required>
+              <label id="labelNumeroCasa" for="numero_casa">Número:</label>
+            </div>
+            <div class="label-float">
+              <input name="complemento" type="text" id="complemento" size="30" required>
+              <label id="labelComplemento" for="complemento">Complemento:</label>
+            </div>
+            <div class="label-float">
+              <input name="bairro" type="text" id="bairro" size="30" required>
+              <label id="labelBairro" for="bairro">Bairro:</label>
+            </div>
+            <div class="label-float">
+              <input name="cidade" type="text" id="cidade" size="39" required>
+              <label id="labelCidade" for="cidade">Cidade:</label>
+            </div>
+            <div class="label-float">
+              <input name="uf" type="text" id="uf" size="4" required>
+              <label id="labelEstado" for="estado">Estado:</label>
+            </div><br><br>
+            <!--OUTRAS INFO-->
+
+
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="F">
-              <label class="form-check-label" for="sexo">
-                Feminino
-              </label>
+              <input class="form-check-input" type="checkbox" id="aceitaNews">
+              <label class="form-check-label" for="aceitaNews">Aceito receber novidades</label>
+
             </div><br>
           </div>
         </div>
+        <button class="btn btn-outline-danger" type="submit" onclick="return validar()">Cadastrar</button>
 
-        <!--DADOS DE ENDEREÇO-->
-        <div class="col">
-          <h5>Endereço</h5>
-
-
-          <div class="label-float">
-            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);"
-              required>
-            <label id="labelCep" for="cep">CEP:</label>
-          </div>
-          <div class="label-float">
-            <input name="rua" type="text" id="rua" size="54" required>
-            <label id="labelRua" for="rua">Rua:</label>
-          </div>
-          <div class="label-float">
-            <input name="numero_casa" type="text" id="numero_casa" size="6" required>
-            <label id="labelNumeroCasa" for="numero_casa">Número:</label>
-          </div>
-          <div class="label-float">
-            <input name="complemento" type="text" id="complemento" size="30" required>
-            <label id="labelComplemento" for="complemento">Complemento:</label>
-          </div>
-          <div class="label-float">
-            <input name="bairro" type="text" id="bairro" size="30" required>
-            <label id="labelBairro" for="bairro">Bairro:</label>
-          </div>
-          <div class="label-float">
-            <input name="cidade" type="text" id="cidade" size="39" required>
-            <label id="labelCidade" for="cidade">Cidade:</label>
-          </div>
-          <div class="label-float">
-            <input name="uf" type="text" id="uf" size="4" required>
-            <label id="labelEstado" for="estado">Estado:</label>
-          </div><br><br>
-          <!--OUTRAS INFO-->
-
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="aceitaNews">
-            <label class="form-check-label" for="aceitaNews">Aceito receber novidades</label>
-
-          </div><br>
-        </div>
       </div>
-      <button class="btn btn-outline-danger" type="submit">Cadastrar</button>
-
     </div>
-  </div>
   </form>
   <!--Formulário Cadastro-->
   <br>
