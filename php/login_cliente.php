@@ -19,8 +19,16 @@ if ($num == 1) {
             <script type="text/javascript">
                 alert('E-mail ou Senha Inválida!');
                 window.location.href = "../html/login.html";
-            </script><?php
+            </script>
+    <?php
                     }
                 }
+            } else {
+    ?>
+    <script type="text/javascript">
+        alert('E-mail ou Senha Inválida!');
+        window.location.href = "../html/login.html";
+    </script>
+<?php
             }
-                        ?>
+?>
