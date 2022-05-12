@@ -55,24 +55,19 @@
   </nav>
   </div>
   <!--Barra de Navegação-->
-  <!--BUSCA-->
-  <nav class="navbar navbar-light bg-light">
-    <div class="container" style="width: auto;">
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" required>
-        <button class="btn btn-outline-danger" type="submit">Buscar</button>
-      </form>
-    </div>
-  </nav>
-  <!--BUSCA-->
+
   <br>
   <!--Listar Produtos-->
   <div class="container">
-    <h2>Produtos</h2>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Buscar Produto" size="80" aria-label="Buscar" required>
+      <button class="btn btn-outline-danger" type="submit">Buscar</button>
+    </form>
+  </div>
     <br>
   </div>
   <div class="container-lg">
-    <span id="conteudo"></span>
+    <div id="conteudo"></div>
   </div>
   <script>
     $(document).ready(function () {
