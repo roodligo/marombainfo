@@ -42,8 +42,8 @@ if(($resultado_produtos) AND ($resultado_produtos->num_rows != 0)){
 ?>
 
 
-<div class="row" style="margin-top:10px;">
-	<div class="d-flex">
+<div class="container" style="margin-top:10px;">
+	<div class="row">
 		<?php
 		$i = 0;
 		$product_id = array();
@@ -58,16 +58,16 @@ if(($resultado_produtos) AND ($resultado_produtos->num_rows != 0)){
 
 			while ($obj = $result->fetch_object()) {
 
-				echo '<div class="col-4">';
+				echo '<div class="col-md-4">';
 				echo '<p><h3>' . $obj->nome . '</h3></p>';
-				echo '<img src="../imagens_produtos/' . $obj->foto . '"/ width="200px">';
-				echo '<p><strong>Código Referência</strong>: ' . $obj->codigo . '</p>';
-				echo '<p><strong>Descrição:</strong>: ' . $obj->observacao . '</p>';
-				echo '<p><strong>Estoque:</strong>: ' . $obj->estoque . '</p>';
-				echo '<p><strong>R$ </strong>: ' . $obj->preco . '</p>';
+				echo '<img src="../imagens_produtos/' . $obj->foto . '"/ width="150px">';
+				echo '<p><strong>Ref.</strong> ' . $obj->codigo . '</p>';
+				echo '<p><strong>Observação:</strong> ' . $obj->observacao . '</p>';
+				echo '<p><strong>Estoque:</strong> ' . $obj->estoque . '</p>';
+				echo '<p><strong>R$</strong>: ' . $obj->preco . '</p>';
 
 				if ($obj->estoque >= 1) {
-					echo '<p><a class="text-reset" href="atualiza_carrinho.php?action=add&id=' . $obj->codigo . '"><input type="submit" value="Adicionar ao Carrinho" class="btn btn-outline-danger " /></a></p>';
+					echo '<p><a class="text-reset" href="atualizacarrinho.php?action=add&id=' . $obj->codigo . '"><input type="submit" value="Adicionar ao Carrinho" class="btn btn-outline-danger " /></a></p>';
 				} else {
 					echo 'Produto sem Estoque!';
 				}

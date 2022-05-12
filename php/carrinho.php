@@ -32,7 +32,7 @@ include_once "conexao.php";
                 echo '<tr>';
                 echo '<td>'.$obj->codigo.'</td>';
                 echo '<td>'.$obj->nome.'</td>';
-                echo '<td>'.$quantity.'&nbsp;<a class="button [secondary success alert]" style="padding:5px;" href="update-cart.php?action=add&id='.$product_id.'">+</a>&nbsp;<a class="button alert" style="padding:5px;" href="update-cart.php?action=remove&id='.$product_id.'">-</a></td>';
+                echo '<td>'.$quantity.'&nbsp;<a class="button [secondary success alert]" style="padding:5px;" href="atualizacarrinho.php?action=add&id='.$product_id.'">+</a>&nbsp;<a class="button alert" style="padding:5px;" href="atualizacarrinho.php?action=remove&id='.$product_id.'">-</a></td>';
                 echo '<td>'.$cost.'</td>';
                 echo '</tr>';
               }
@@ -48,7 +48,7 @@ include_once "conexao.php";
           echo '</tr>';
 
           echo '<tr>';
-          echo '<td colspan="4" align="right"><a href="update-cart.php?action=empty" class="button alert">Empty Cart</a>&nbsp;<a href="products.php" class="button [secondary success alert]">Continue Shopping</a>';
+          echo '<td colspan="4" align="right"><a href="atualizacarrinho.php?action=empty" class="button alert">Empty Cart</a>&nbsp;<a href="../html/produtos.html" class="button [secondary success alert]">Continue Shopping</a>';
           if(isset($_SESSION['username'])) {
             echo '<a href="orders-update.php"><button style="float:right;">COD</button></a>';
           }
