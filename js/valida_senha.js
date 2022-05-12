@@ -1,10 +1,16 @@
-function validar(){
-var senha1 = getElementById('senha');
-var senha2 = getElementById('confere_senha');
-    if (senha1 == '' || senha1.lenght <= 5);{
-        alert('Preencha uma senha com no mínimo 6 caracteres');
-        getElementById('senha').focus();
+function validar() {
+    var senha = f_cad.senha.value;
+    var repetesenha = f_cad.repetesenha.value;
+
+    if (senha == "" || senha.length <= 7) {
+        alert('Preencha uma Senha com no mínimo 8 Caracteres!');
+        f_cad.senha.focus();
         return false;
     }
 
+    if (senha != repetesenha) {
+        alert('As Senhas digitadas não Conferem!');
+        f_cad.senha.focus();
+        return false;
+    }
 }
