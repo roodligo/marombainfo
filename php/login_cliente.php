@@ -27,7 +27,7 @@ if ($num == 1) {
     ?>
     <script type="text/javascript">
         alert('E-mail ou Senha Inválida!');
-        window.location.href = "../html/login.html";
+        window.location.href = "../html/login-cadastro.html";
     </script>
 <?php
             }

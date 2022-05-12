@@ -24,11 +24,10 @@ body {
 }
 
 .card {
-  background-color: #ffffff80;
+  background-color:#e3e3e3;
+  opacity: initial;
   padding: 40px;
-  border-radius: 2%;
-  box-shadow: 5px 3px 3px 0px #00000060;
-  width: auto;
+  
 }
 
 
@@ -56,7 +55,7 @@ body {
 }
 
 .label-float input:focus {
-  border-bottom: 2px solid #4038a0;
+  border-bottom: 2px solid #db1b1e;
 }
 
 .label-float label {
@@ -79,14 +78,6 @@ body {
 .justify-center {
   display: flex;
   justify-content: center;
-}
-
-.fa-eye {
-  position: absolute;
-  top: 15px;
-  right: 10px;
-  cursor: pointer;
-  color: #0d009c;
 }
 
 h1 {
@@ -135,4 +126,26 @@ a:hover:before {
   transform: scaleX(0);
   -webkit-transition: all 0.1s ease-in-out 0s;
   transition: all 0.1s ease-in-out 0s;
+}
+
+#input > * {
+  height: 1.9em;
+  float: left;
+}
+
+#input img {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+}
+
+#input2 > * {
+  height: 1.9em;
+  float: left;
+}
+
+#input2 img {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
 }

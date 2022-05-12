@@ -5,9 +5,7 @@ include_once "conexao.php";
 <div class="row" style="margin-top:10px;">
       <div class="large-12">
         <?php
-
           echo '<p><h3>Carrinho</h3></p>';
-
           if(isset($_SESSION['cart'])) {
 
             $total = 0;
@@ -37,11 +35,7 @@ include_once "conexao.php";
                 echo '</tr>';
               }
             }
-
           }
-
-
-
           echo '<tr>';
           echo '<td colspan="3" align="right">Total</td>';
           echo '<td>'.$total.'</td>';
@@ -66,11 +60,6 @@ include_once "conexao.php";
         else {
           echo "You have no items in your shopping cart.";
         }
-
-
-
-
-
           echo '</div>';
           echo '</div>';
           ?>

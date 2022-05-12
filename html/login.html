@@ -19,8 +19,8 @@
 </head>
 
 <body>
-   <!--Barra de Navegação-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!--Barra de Navegação-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="#"></a>
       <img src="/imagens/logo.png" alt="" width="132 height=" 100">
@@ -41,7 +41,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/html/quem-somos.html">Quem Somos</a>
-          </li> 
+          </li>
         </ul>
       </div>
       <nav class="navbar navbar-light bg-light">
@@ -58,7 +58,7 @@
   </nav>
   </div>
   <!--Barra de Navegação-->
-<br>
+  <br>
   <!--Formulário Login-->
   <div class="container">
     <div class="card">
@@ -68,11 +68,18 @@
           <input type="email" id="email" name="email" required>
           <label id="labelEmail" for="email">E-mail</label>
         </div>
-        <div class="label-float">
+        <div class="label-float" id="input">
           <input type="password" id="senha" name="senha" required>
           <label id="labelSenha" for="senha">Senha</label>
-          <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
-
+          <img src="http://i.stack.imgur.com/H9Sb2.png" alt="">
+          <br><br>
+          <script>
+            var input = document.querySelector('#input input');
+            var img = document.querySelector('#input img');
+            img.addEventListener('click', function () {
+              input.type = input.type == 'text' ? 'password' : 'text';
+            });
+          </script>
         </div>
         <button class="btn btn-outline-danger" type="submit">Entrar</button>
       </form>
