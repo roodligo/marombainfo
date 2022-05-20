@@ -1,7 +1,7 @@
 <?php
-$servidor = "sql10.freemysqlhosting.net";
-$usuario = "sql10493844";
-$senha = "YhXyr2MVdl";
-$dbname = "sql10493844";
+$servidor = "localhost";
+$usuario = "root";
+$senha = "d4rks1d3";
+$dbname = "lojaonline";
 $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 ?>
