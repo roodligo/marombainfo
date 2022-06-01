@@ -67,7 +67,7 @@ if(($resultado_produtos) AND ($resultado_produtos->num_rows != 0)){
 				echo '<p><strong>R$</strong>: ' . $obj->preco . '</p>';
 
 				if ($obj->estoque >= 1) {
-					echo '<p><a class="text-reset" href="atualizacarrinho.php?action=add&id=' . $obj->codigo . '"><input type="submit" value="Adicionar ao Carrinho" class="btn btn-outline-danger " /></a></p>';
+					echo '<p><a class="text-reset" href="../php/atualizacarrinho.php?action=add&id=' . $obj->codigo . '"><input type="submit" value="Adicionar ao Carrinho" class="btn btn-outline-danger " /></a></p>';
 				} else {
 					echo 'Produto sem Estoque!';
 				}
@@ -77,7 +77,6 @@ if(($resultado_produtos) AND ($resultado_produtos->num_rows != 0)){
 			}
 		}
 
-		$_SESSION['product_id'] = $product_id;
 
 
 		echo '</div>';

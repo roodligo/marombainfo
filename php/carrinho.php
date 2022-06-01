@@ -1,65 +1,31 @@
 <?php
-include_once "conexao.php";
-?>
+if (session_id() == '' || !isset($_SESSION)) {
+    session_start();
+}
 
-<div class="row" style="margin-top:10px;">
-      <div class="large-12">
-        <?php
-          echo '<p><h3>Carrinho</h3></p>';
-          if(isset($_SESSION['cart'])) {
+echo '<div class="container"><h3>Carrinho: </h3></div>';
+$custo = 0;
+$total = 0;
 
-            $total = 0;
-            echo '<table>';
-            echo '<tr>';
-            echo '<th>Código</th>';
-            echo '<th>Nome</th>';
-            echo '<th>Quantidade</th>';
-            echo '<th>Unitário</th>';
-            echo '</tr>';
-            foreach($_SESSION['cart'] as $product_id => $quantity) {
+echo '<table class="table table-borderless">';
+echo '<tr>';
+echo '<th>Descrição</th>';
+echo '<th>Qtd</th>';
+echo '<th>Unitário</th>';
+echo '<th>Total</th>';
+echo '</tr>';
+foreach ($_SESSION['cart'] as $codigo_produto => $value) {
+    // echo '<div class="container"><p>Código: '.$value['codigo'].' | Descrição: '.$value['nome'].' | Quantidade: '.$value['quantidade'].' | Unitário: '.$value['unitario'].' | Total: '.$value['quantidade'] * $value['unitario'].'</p></div>';
+    echo '<tr>';
+    echo '<td>' . $value['nome'] . '</td>';
+    echo '<td>' . $value['quantidade'] . '</td>';
+    echo '<td>' . $value['unitario'] . '</td>';
+    echo '<td>' . $value['quantidade'] * $value['unitario'] . '</td>';
+    echo '</tr>';
+    $custo = $value['quantidade'] * $value['unitario'];
+    $total = $total + $custo;
+}
+echo '</table>';
 
-            $result = $conn->query("SELECT codigo, nome, observacao,estoque, preco FROM cad_prodtuo WHERE codigo = ".$product_id);
-
-
-            if($result){
-
-              while($obj = $result->fetch_object()) {
-                $cost = $obj->preco * $quantity; //work out the line cost
-                $total = $total + $cost; //add to the total cost
-
-                echo '<tr>';
-                echo '<td>'.$obj->codigo.'</td>';
-                echo '<td>'.$obj->nome.'</td>';
-                echo '<td>'.$quantity.'&nbsp;<a class="button [secondary success alert]" style="padding:5px;" href="atualizacarrinho.php?action=add&id='.$product_id.'">+</a>&nbsp;<a class="button alert" style="padding:5px;" href="atualizacarrinho.php?action=remove&id='.$product_id.'">-</a></td>';
-                echo '<td>'.$cost.'</td>';
-                echo '</tr>';
-              }
-            }
-          }
-          echo '<tr>';
-          echo '<td colspan="3" align="right">Total</td>';
-          echo '<td>'.$total.'</td>';
-          echo '</tr>';
-
-          echo '<tr>';
-          echo '<td colspan="4" align="right"><a href="atualizacarrinho.php?action=empty" class="button alert">Empty Cart</a>&nbsp;<a href="../html/produtos.html" class="button [secondary success alert]">Continue Shopping</a>';
-          if(isset($_SESSION['username'])) {
-            echo '<a href="orders-update.php"><button style="float:right;">COD</button></a>';
-          }
-
-          else {
-            echo '<a href="login.php"><button style="float:right;">Login</button></a>';
-          }
-
-          echo '</td>';
-
-          echo '</tr>';
-          echo '</table>';
-        }
-
-        else {
-          echo "You have no items in your shopping cart.";
-        }
-          echo '</div>';
-          echo '</div>';
-          ?>
+echo '<tr>';
+echo '<h4 class="container"> Total do Pedido R$: ' . $total . '</h4>';
