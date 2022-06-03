@@ -56,9 +56,9 @@ if(($resultado_produtos) AND ($resultado_produtos->num_rows != 0)){
 
 			while ($obj = $result->fetch_object()) {
 
-				echo '<div class="col-md-4">';
-				echo '<p><h3>' . $obj->nome . '</h3></p>';
-				echo '<img src="../imagens_produtos/' . $obj->foto . '"/ width="150px">';
+				echo '<div class="col-md-4 text-white">';
+				echo '<p><h3 >' . $obj->nome . '</h3></p>';
+				echo '<img src="../imagens_produtos/' . $obj->foto . '"width="150px">';
 				echo '<p><strong>Ref.</strong> ' . $obj->codigo . '</p>';
 				echo '<p><strong>Observação:</strong> ' . $obj->observacao . '</p>';
 				echo '<p><strong>Estoque:</strong> ' . $obj->estoque . '</p>';
@@ -80,9 +80,3 @@ if(($resultado_produtos) AND ($resultado_produtos->num_rows != 0)){
 		echo '</div>';
 		echo '</div>';
 		?>
-
-		<div class="row" style="margin-top:10px;">
-			<div class="small-12">
-
-			</div>
-		</div>

@@ -38,18 +38,20 @@
             <a class="nav-link" href="/html/produtos.html">Produtos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/html/contato.html">Contato</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/html/quem-somos.html">Quem Somos</a>
           </li> 
         </ul>
       </div>
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <form action="/html/login-cadastro.html">
-            <input type="submit" class="btn btn-danger" value="Faça Login ou Cadastre-se" />
-          </form>
+          <div id="login"></div>
+        <script>
+          $(document).ready(function () {
+            $.post('../php/apresenta_login.php', function (retorna) {
+              $("#login").html(retorna);
+            });
+          });
+        </script>
           <form action="/html/carrinho.html">
             <button type="submit" class="btn btn-warning">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart"

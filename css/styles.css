@@ -7,10 +7,7 @@
 }
 
 body {
-  /* background-image:url(https://png.pngtree.com/background/20210711/original/pngtree-colorful-bright-smoke-texture-background-picture-image_1162372.jpg); */
-  /* background-image: url(https://img.freepik.com/vetores-gratis/fundo-geometrico-plano-colorido_52683-62754.jpg?w=1060&t=st=1649685451~exp=1649686051~hmac=a31c234703382a2a5fd3119f4f77c02a197480515d0d11f34819babdfb5dde53); */
-  /* background-image: url(https://i.imgur.com/XbRg9D7.png); */
-  background-color: #eaedee;
+  background-color:#343a40;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed
@@ -27,10 +24,7 @@ body {
   background-color:#e3e3e3;
   opacity: initial;
   padding: 40px;
-  
 }
-
-
 
 .label-float input {
   width: 100%;
@@ -59,8 +53,6 @@ body {
 }
 
 .label-float label {
-
-  /* pointer-event: none; */
   position: absolute;
   top: 0;
   left: 0;
@@ -91,7 +83,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
-
+/* BORDA VERMELHA DOS LINKS DA BARRA DE NAVEGACAO */
 a:before {
   content: "";
   position: absolute;
@@ -112,7 +104,7 @@ a:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
+/* TIRAR BORDINHA VERMELHA DOS LINKS */
 .text-reset:before {
   content: "";
   position: absolute;
@@ -127,7 +119,7 @@ a:hover:before {
   -webkit-transition: all 0.1s ease-in-out 0s;
   transition: all 0.1s ease-in-out 0s;
 }
-
+/* OLHO DA SENHA */
 #input > * {
   height: 1.9em;
   float: left;
@@ -148,4 +140,18 @@ a:hover:before {
   cursor: pointer;
   position: absolute;
   width: 20px;
+}
+/* SCROLLBAR */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #212529;        
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #dc3545; 
+  border-radius: 20px;       
+  border: 0px solid #212529;  
 }

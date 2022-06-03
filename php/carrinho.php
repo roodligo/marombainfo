@@ -7,7 +7,7 @@ echo '<div class="container"><h3>Carrinho: </h3></div>';
 $custo = 0;
 $total = 0;
 
-echo '<table class="table table-borderless">';
+echo '<table class="table table-borderless bg-light">';
 echo '<tr>';
 echo '<th>Descrição</th>';
 echo '<th>Qtd</th>';
