@@ -45,9 +45,7 @@ if(($resultado_produtos) AND ($resultado_produtos->num_rows != 0)){
 <div class="container" style="margin-top:10px;">
 	<div class="row">
 		<?php
-		$i = 0;
-		$product_id = array();
-		$product_quantity = array();
+		
 
 		$result = $conn->query('SELECT codigo, nome, observacao, FORMAT(preco, 2) as preco, foto, estoque FROM cad_produto');
 		if ($result === FALSE) {
@@ -73,7 +71,7 @@ if(($resultado_produtos) AND ($resultado_produtos->num_rows != 0)){
 				}
 				echo '</div>';
 
-				$i++;
+			
 			}
 		}
 

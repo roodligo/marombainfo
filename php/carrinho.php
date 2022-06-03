@@ -2,7 +2,7 @@
 if (session_id() == '' || !isset($_SESSION)) {
     session_start();
 }
-
+if (isset($_SESSION['cart'])) {
 echo '<div class="container"><h3>Carrinho: </h3></div>';
 $custo = 0;
 $total = 0;
@@ -29,3 +29,7 @@ echo '</table>';
 
 echo '<tr>';
 echo '<h4 class="container"> Total do Pedido R$: ' . $total . '</h4>';
+}
+else{
+    echo`<h4 class="container">Carrinho Vazio</h4>`;
+}
