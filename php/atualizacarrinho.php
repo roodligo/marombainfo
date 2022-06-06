@@ -27,16 +27,22 @@ if ($result) {
 ?>
                 <script type="text/javascript">
                     alert('Item adicionado ao Carrinho!');
-                    window.location.href = "../html/produtos.html";
+                    window.location.href = "/php/listar_produtos.php?filtro=0";
                 </script>
             <?php
                 break;
 
             case "remove":
-                $_SESSION['cart'][$obj->codigo][$quantidade]--;
-                if ($_SESSION['cart'][$obj->codigo] == 0)
+                $_SESSION['cart'][$obj->codigo]['quantidade']--;
+                if ($_SESSION['cart'][$obj->codigo]['quantidade'] == 0)
                     unset($_SESSION['cart'][$obj->codigo]);
-                break;
+            ?>
+                <script type="text/javascript">
+                    alert('Item removido!');
+                    window.location.href = "../html/carrinho.html";
+                </script>
+<?php
+    break;
         }
     }
 }
