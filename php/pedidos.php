@@ -5,6 +5,11 @@ if (session_id() == '' || !isset($_SESSION)) {
     include_once "conexao.php";
 }
 
+			$pagina = filter_input(INPUT_POST, 'pagina', FILTER_SANITIZE_NUMBER_INT);
+			$qnt_result_pg = filter_input(INPUT_POST, 'qnt_result_pg', FILTER_SANITIZE_NUMBER_INT);
+			//calcular o inicio visualização
+			$inicio = ($pagina * $qnt_result_pg) - $qnt_result_pg;
+
 if (isset($_SESSION['email'])) {
     $email = ($_SESSION['email']);
     $result1 = $conn->query("SELECT * FROM cad_cliente WHERE email = '$email'");
@@ -31,7 +36,7 @@ if (isset($_SESSION['email'])) {
 
 
 
-        $sql3 = "SELECT
+    $sql3 = "SELECT
     pedidos.codigo_pedido as 'pedido',
     pedidos.status_pedido as 'status',
     cad_produto.nome as 'nome',
@@ -52,6 +57,7 @@ if (isset($_SESSION['email'])) {
         if ($result3 === FALSE) {
             die('erro');
         }else{
+            
 
         
 
@@ -103,4 +109,6 @@ if (isset($_SESSION['email'])) {
     }}
 }else{
 echo '<div class="card container"><h2>Faça login para acessar os Pedidos!</h2></div>';
-}?>
+}
+
+?>

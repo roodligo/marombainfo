@@ -44,14 +44,14 @@
             </div>
             <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
-                        <div id="login"></div>
-                      <script>
+                    <div id="login"></div>
+                    <script>
                         $(document).ready(function () {
-                          $.post('../php/apresenta_login.php', function (retorna) {
-                            $("#login").html(retorna);
-                          });
+                            $.post('../php/apresenta_login.php', function (retorna) {
+                                $("#login").html(retorna);
+                            });
                         });
-                      </script>
+                    </script>
                 </div>
             </nav>
         </div>
@@ -65,12 +65,11 @@
             <div id="conteudo"></div>
         </div>
         <script>
-              $(document).ready(function () {
-                  $.post('../php/pedidos.php', function (retorna) {
-                      $("#conteudo").html(retorna);
-                  });
-              }); 
-            
+            $(document).ready(function () {
+                $.post('../php/pedidos.php', function (retorna) {
+                    $("#conteudo").html(retorna);
+                });
+            });
         </script>
     </div>
     <!--Contato-->

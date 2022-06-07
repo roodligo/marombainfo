@@ -121,8 +121,7 @@ $filtro = $_GET["filtro"];
 		<div class="container-lg mt-1">
 			<div class="row">
 				<?php
-
-
+				
 				$result = $conn->query('SELECT codigo, nome, observacao, FORMAT(preco, 2) as preco, foto, estoque FROM cad_produto');
 				if ($result === FALSE) {
 					die('erro');
@@ -149,162 +148,161 @@ $filtro = $_GET["filtro"];
 					}
 				}
 
+			echo '</div>';
+			echo '</div>';
 
-
-				echo '</div>';
-				echo '</div>';
-			} else {
-				?>
+				
+		} else {
+			?>
 				<div class="container-lg mt-1">
 					<div class="row">
-						<?php
+					<?php
 
 
-						$result = $conn->query('SELECT codigo, nome, observacao, FORMAT(preco, 2) as preco, foto, estoque FROM cad_produto where categoria_id =' . $filtro);
-						if ($result === FALSE) {
-							die('erro');
-						}
-
-						if ($result) {
-
-							while ($obj = $result->fetch_object()) {
-
-								echo '<div class="col-lg-4 text-white">';
-								echo '<p><h3 >' . $obj->nome . '</h3></p>';
-								echo '<img src="../imagens_produtos/' . $obj->foto . '"width="150px">';
-								echo '<p><strong>Ref.</strong> ' . $obj->codigo . '</p>';
-								echo '<p><strong>Observação:</strong> ' . $obj->observacao . '</p>';
-								echo '<p><strong>Estoque:</strong> ' . $obj->estoque . '</p>';
-								echo '<p><strong>R$</strong>: ' . $obj->preco . '</p>';
-	
-								if ($obj->estoque >= 1) {
-									echo '<p><a class="text-reset" href="../php/atualizacarrinho.php?action=add&id=' . $obj->codigo . '"><input type="submit" value="Adicionar ao Carrinho" class="btn btn-warning " /></a></p>';
-								} else {
-									echo 'Produto sem Estoque!';
-								}
-								echo '</div>';
-							}
-						}
-
-
-
-						echo '</div>';
-						echo '</div>';
+					$result = $conn->query('SELECT codigo, nome, observacao, FORMAT(preco, 2) as preco, foto, estoque FROM cad_produto where categoria_id =' . $filtro);
+					if ($result === FALSE) {
+						die('erro');
 					}
+
+					if ($result) {
+
+						while ($obj = $result->fetch_object()) {
+
+							echo '<div class="col-lg-4 text-white">';
+							echo '<p><h3 >' . $obj->nome . '</h3></p>';
+							echo '<img src="../imagens_produtos/' . $obj->foto . '"width="150px">';
+							echo '<p><strong>Ref.</strong> ' . $obj->codigo . '</p>';
+							echo '<p><strong>Observação:</strong> ' . $obj->observacao . '</p>';
+							echo '<p><strong>Estoque:</strong> ' . $obj->estoque . '</p>';
+							echo '<p><strong>R$</strong>: ' . $obj->preco . '</p>';
+
+							if ($obj->estoque >= 1) {
+								echo '<p><a class="text-reset" href="../php/atualizacarrinho.php?action=add&id=' . $obj->codigo . '"><input type="submit" value="Adicionar ao Carrinho" class="btn btn-warning " /></a></p>';
+							} else {
+								echo 'Produto sem Estoque!';
+							}
+							echo '</div>';
+						}
+					}
+
+
+					echo '</div>';
+					echo '</div>';
+				}
 					?>
 
 </body>
 <br><br>
 <!--Rodapé-->
 <footer class="text-center text-lg-start bg-dark text-muted">
-    <!-- Redes Sociais -->
-    <div class="container">
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Lado Esquerdo -->
-            <div class="me-5 d-none d-lg-block">
-                <span>Nos sigam nas Redes Sociais:</span>
-            </div>
-            <!-- Lado Esquerdo -->
+	<!-- Redes Sociais -->
+	<div class="container">
+		<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+			<!-- Lado Esquerdo -->
+			<div class="me-5 d-none d-lg-block">
+				<span>Nos sigam nas Redes Sociais:</span>
+			</div>
+			<!-- Lado Esquerdo -->
 
-            <!-- Lado Direito -->
-            <div>
-                <a href="#" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                    Facebook
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                    Twitter
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                    Instagram
-                </a>
-            </div>
-            <!-- Lado Direito -->
-        </section>
-    </div>
-    <!-- Redes Sociais -->
+			<!-- Lado Direito -->
+			<div>
+				<a href="#" class="me-4 text-reset">
+					<i class="fab fa-facebook-f"></i>
+					Facebook
+				</a>
+				<a href="" class="me-4 text-reset">
+					<i class="fab fa-twitter"></i>
+					Twitter
+				</a>
+				<a href="" class="me-4 text-reset">
+					<i class="fab fa-instagram"></i>
+					Instagram
+				</a>
+			</div>
+			<!-- Lado Direito -->
+		</section>
+	</div>
+	<!-- Redes Sociais -->
 
-    <!-- Links  -->
-    <section class="">
-        <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <!-- Content -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>Portal Maromba
-                    </h6>
-                    <p>
-                        Não deixe para amanhã o que pode fazer hoje!
-                    </p>
-                </div>
-                <!-- Grid column -->
+	<!-- Links  -->
+	<section class="">
+		<div class="container text-center text-md-start mt-5">
+			<!-- Grid row -->
+			<div class="row mt-3">
+				<!-- Grid column -->
+				<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+					<!-- Content -->
+					<h6 class="text-uppercase fw-bold mb-4">
+						<i class="fas fa-gem me-3"></i>Portal Maromba
+					</h6>
+					<p>
+						Não deixe para amanhã o que pode fazer hoje!
+					</p>
+				</div>
+				<!-- Grid column -->
 
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        CATEGORIAS
-                    </h6>
-                    <p>
-                        <a href="../php/listar_produtos.php?filtro=1" class="text-reset">Ganho de Massa</a>
-                    </p>
-                    <p>
-                        <a href="../php/listar_produtos.php?filtro=2" class="text-reset">Emagrecimento</a>
-                    </p>
-                    <p>
-                        <a href="../php/listar_produtos.php?filtro=3" class="text-reset">Competição</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
+				<!-- Grid column -->
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+					<!-- Links -->
+					<h6 class="text-uppercase fw-bold mb-4">
+						CATEGORIAS
+					</h6>
+					<p>
+						<a href="../php/listar_produtos.php?filtro=1" class="text-reset">Ganho de Massa</a>
+					</p>
+					<p>
+						<a href="../php/listar_produtos.php?filtro=2" class="text-reset">Emagrecimento</a>
+					</p>
+					<p>
+						<a href="../php/listar_produtos.php?filtro=3" class="text-reset">Competição</a>
+					</p>
+				</div>
+				<!-- Grid column -->
 
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        CLIENTE
-                    </h6>
-                    <p>
-                        <a href="../html/perfil_cliente.html" class="text-reset">Perfil</a>
-                    </p>
-                    <p>
-                        <a href="../html/pedidos.html" class="text-reset">Meus Pedidos</a>
-                    </p>
-                    <p>
-                        <a href="../html/quem-somos.html" class="text-reset">Quem Somos</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
+				<!-- Grid column -->
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+					<!-- Links -->
+					<h6 class="text-uppercase fw-bold mb-4">
+						CLIENTE
+					</h6>
+					<p>
+						<a href="../html/perfil_cliente.html" class="text-reset">Perfil</a>
+					</p>
+					<p>
+						<a href="../html/pedidos.html" class="text-reset">Meus Pedidos</a>
+					</p>
+					<p>
+						<a href="../html/quem-somos.html" class="text-reset">Quem Somos</a>
+					</p>
+				</div>
+				<!-- Grid column -->
 
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        Contato
-                    </h6>
-                    <p><i class="fas fa-home me-3"></i> Av. Paulista, 1016</p>
-                    <p>
-                        <i class="fas fa-envelope me-3"></i>
-                        contato@portalmaromba.com.br
-                    </p>
-                    <p><i class="fas fa-print me-3"></i> + 55 (11)4002-8922</p>
-                </div>
-                <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-        </div>
-    </section>
-    <!-- Section: Links  -->
+				<!-- Grid column -->
+				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+					<!-- Links -->
+					<h6 class="text-uppercase fw-bold mb-4">
+						Contato
+					</h6>
+					<p><i class="fas fa-home me-3"></i> Av. Paulista, 1016</p>
+					<p>
+						<i class="fas fa-envelope me-3"></i>
+						contato@portalmaromba.com.br
+					</p>
+					<p><i class="fas fa-print me-3"></i> + 55 (11)4002-8922</p>
+				</div>
+				<!-- Grid column -->
+			</div>
+			<!-- Grid row -->
+		</div>
+	</section>
+	<!-- Section: Links  -->
 
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2022 Copyright:
-        <a class="text-reset fw-bold" href="#">Rodrigo Ferreira</a>
-    </div>
-    <!-- Copyright -->
+	<!-- Copyright -->
+	<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+		© 2022 Copyright:
+		<a class="text-reset fw-bold" href="#">Rodrigo Ferreira</a>
+	</div>
+	<!-- Copyright -->
 </footer>
 <!-- Footer -->
 

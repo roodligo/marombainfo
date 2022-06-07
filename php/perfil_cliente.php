@@ -15,9 +15,8 @@ if (isset($_SESSION['email'])) {
     
     echo '<div class="card">
     <h3> Bem Vindo!</h3>
-    <h3>'.$nome.'</h3></div>
-    <div class="container text-white">
-    <a href="../html/pedidos.html">Acessar meus Pedidos</a>
+    <h3>'.$nome.'</h3>
+    <a class="text-reset" href="../html/pedidos.html"><input type="submit" value="Acessar meus Pedidos" class="btn btn-info " /></a>
     </div>';
 
     

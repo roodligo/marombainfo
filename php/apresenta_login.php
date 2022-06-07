@@ -9,7 +9,9 @@ if (isset($_SESSION['email'])) {
     $result = $conn->query("SELECT * FROM cad_cliente WHERE email = '$email'");
     while ($obj = $result->fetch_object()) { 
         echo '<div class="container text-white"><h5 style="margin: auto;">'
-         . $obj->nome . '  </h5> <form action="../php/logoff.php">
+         . $obj->nome . '  </h5> 
+         <a class="text-reset" href="../html/perfil_cliente.html"><input type="submit" value="Perfil" class="btn btn-light " /></a>
+         <form action="../php/logoff.php"> 
          <input type="submit" class="btn btn-danger" value="Sair" />
          </form> </div>';
     }

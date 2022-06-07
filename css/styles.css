@@ -153,17 +153,16 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #212529;
+  background: #343a40;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #343a40;
+  background-color: #dc3545;
   border-radius: 20px;
-  border: 0px solid #212529;
+  border: 6px solid #dc3545;
 }
 
 .form-select {
-  /* background-color:#dc3545 ; */
   background-color: #dc3545;
   border-color: #dc3545;
 }
@@ -177,9 +176,11 @@ body::-webkit-scrollbar-thumb {
   bottom:0;
 }
 
+/*FORMAS DE PAGAMENTO NO CARRINHO*/
 #p_pix:checked ~ #pag_pix{
   display: block;
 }
+
 #pag_pix {
   display:none;
 }

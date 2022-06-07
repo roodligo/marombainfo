@@ -55,7 +55,6 @@ if (isset($_SESSION['email'])) {
             window.location.href = "../index.html";
         </script>
     <?php
-
     }
 } else {
     ?> <script type="text/javascript">

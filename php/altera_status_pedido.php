@@ -1,7 +1,6 @@
 <?php
 if (session_id() == '' || !isset($_SESSION)) {
     session_start();
-
     include_once "conexao.php";
 }
 $status = $_GET['status'];
