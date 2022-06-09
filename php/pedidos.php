@@ -20,7 +20,7 @@ if (isset($_SESSION['email'])) {
     echo '<div class="container text-white"><h3>Pedidos: </h3></div>';
     $custo = 0;
     $total = 0;
-    $cap_primeiropedido = $conn->query("SELECT min(codigo_pedido) as 'codigo_pedido' FROM pedidos WHERE codigo_cliente = '$idcliente'");
+   $cap_primeiropedido = $conn->query("SELECT min(codigo_pedido) as 'codigo_pedido' FROM pedidos WHERE codigo_cliente = '$idcliente'");
     while ($cap1 = $cap_primeiropedido->fetch_object()) {
         $primeiropedido = $cap1->codigo_pedido;
     }
@@ -28,10 +28,11 @@ if (isset($_SESSION['email'])) {
     while ($cap2 = $cap_ultimopedido->fetch_object()) {
         $ultimopedido = $cap2->codigo_pedido;
     }
-
-
+    
     $codigopedido = $primeiropedido;
     while ($codigopedido <= $ultimopedido) {
+
+        
 
 
 

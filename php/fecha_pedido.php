@@ -26,7 +26,7 @@ if (isset($_SESSION['email'])) {
     $string1 = "INSERT INTO pedidos VALUES";
     $string1 .= "(NULL,'$status','$codigo_cliente','$total','$forma_pagto')";
     mysqli_query($conn, $string1) or die("Erro ao Cadastrar");
-
+    
     $sql = "SELECT MAX(codigo_pedido) as codigo_pedido FROM pedidos WHERE codigo_cliente = '$codigo_cliente'";
     $result = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_assoc($result)) {
@@ -39,7 +39,7 @@ if (isset($_SESSION['email'])) {
 
         $string = "INSERT INTO pedidos_itens VALUES";
         $string .= "('$codigo_pedido','$codigo_produto','$quantidade','$unitario')";
-        mysqli_query($conn, $string) or die("Erro ao Cadastrar");
+        mysqli_query($conn, $string) or die("Erro ao Cadastrar");  
     }
     $custo = $value['quantidade'] * $value['unitario'];
 ?>
