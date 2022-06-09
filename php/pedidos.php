@@ -101,7 +101,7 @@ if (isset($_SESSION['email'])) {
             }
         }
         echo '</table>';
-        echo '<div class="mb-3"><h3>Total: ' . $total . '</h3></div>';
+        echo '<div class="mb-3"><h5>Total R$: ' . $total . '</h5></div>';
         echo '<div>' . $status . '</div>';
         echo '<br>';
         echo ' </div>';

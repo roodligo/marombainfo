@@ -107,8 +107,8 @@ if (isset($_SESSION['email'])) {
                     }
                 }
                 echo '</table>';
-                echo '<div class="mb-3"><h3>Total: ' . $total . '</h3></div>';
-                echo '<div class="mb-3"><h3>Cliente: ' . $cliente . '</h3></div>';
+                echo '<div class="mb-3"><h6>Total R$: ' . $total . '</h6></div>';
+                echo '<div class="mb-3"><h6>Cliente: ' . $cliente . '</h6></div>';
                 echo '<div>' . $status . '</div>';
                 echo '<div>' . $cancela . '</div>';
                 echo '<br>';
